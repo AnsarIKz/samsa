@@ -138,7 +138,7 @@ class CurrentUserView(APIView):
         user_id = request.data.get('user_id')
 
         # Получаем пользователя по user_id
-        user = get_object_or_404(Profile, user_id=user_id)
+        user = get_object_or_404(Profile, id=user_id)
 
         # Сериализуем данные пользователя
         serializer = ProfileSerializer(user)
